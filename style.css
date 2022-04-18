@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Rubik&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Rubik;
+}
+
+.counter-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    bottom: 0px;
+}
+.date{
+    font-size: 14px;
+}
+.video-tile{
+    font-weight: 600;
+    padding: 5px;
+}
+.font-italic{
+    font-style: italic;
+}
