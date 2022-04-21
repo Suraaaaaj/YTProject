@@ -16,12 +16,18 @@ let maxPages = 0;
         </nav>
     `
     document.getElementById('nav').innerHTML = nav;
+    getData();
+    render();
 })();
 
 async function getData(){
+    
     pageNo = 0;
     var keyword = document.getElementById('search-box').value;
-    console.log(keyword);
+  
+    if(keyword=="") {
+        keyword='covid';
+    }
     await fetch(url+keyword)
     .then(res=> res.json()).
     then(data=>{
@@ -69,8 +75,8 @@ function render(){
                 </div>
                 <div class="counter-section mt-3">
                     <div class="row"> 
-                        <button class="btn btn-danger col-4 btn-1 p-1" onclick="getPreviousPage()"> Previous</button>
-                        <div class="col-4 mt-2">${pageNo+1}/${maxPages}</div>
+                        <button class="btn btn-danger col-5 btn-1 " onclick="getPreviousPage()"> Previous</button>
+                        <div class="col-3 mt-2">${pageNo+1}/${maxPages}</div>
                         <button class="btn btn-danger col-4 btn-1" onclick="getNextPage()">Next</button>
                     <div>
                 </div>
